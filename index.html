@@ -38,10 +38,10 @@ a {
 
 .logo {
   background-color: #1e1f20 ;
-  height: 50px;
-  width: 50px;
+  height: 48px;
+  width: 55px;
   position: fixed;
-  clear: right;
+  padding-top:7.5px;
   z-index: 2;
 }
 
@@ -52,8 +52,7 @@ a {
   background-position: center;
   height: 30px;
   width: 100%;
-  padding-top: 60px;
-  margin-bottom: -20px;
+  padding-top: 3%;
 }
 
 .nav {
@@ -67,6 +66,7 @@ a {
   font-size: 10px;
   font-weight:500;
   z-index: 1;
+  padding: 0px 10px;
 }
 
 .navitem {
@@ -150,12 +150,12 @@ a {
  }
 
  .bgimg-3 {
-   background-image:linear-gradient(to bottom, #777 0%, #333 100%), url("https://lh3.googleusercontent.com/8ndY8TD_5YdKXou99Ou5MtqwNo6TXHEBcbn0mS7Rhfq-Riw-AOpmSdDobuNHT3PVkN1Ux62sGGBaOcMbwz38KHS662Kp3vn-56MA3Gq4u3sBcsRrogSfgK-wIj02mAvxZYP757QnCYRIo856DPWEh9G-axZny5AwCOkLUwhTbbTv525Px760VVVdsPtLiK40A5fkJa7scNS8p_yEMbgVKWF2IhBGg5Y1_3-AX4LD8O2gekKMVyXOljJ-eU965z6b33tX3ts-u5TOBMRJOM3BTHBkpvElQ6KJiSVQPrDUuPKA2V9r25_2cl3I_6u7AqapyxQzXVCsuL1f1TTslplrBkMpW78j-He3P-CQYYcM7y737S2WBDzRDOZX1okZvUzZaOEoV0sry1dG1u9W89xvN8jRm_A5plKYzhoV4UB-uRwRsOTcGxEHpWeaE-96onj3XXyfADNey7tpTaY6Y4Np4KP2uuHHqcmNrzmCKNWatbSOPT_8OwTdaSQCVMSQNZgl0r7iFpFY691nLmQhOMpRIfjcbN6RfTta8rF2KzQetTVK3qp4VDiUEvw--Qvy33U2Gi4RdoZE5ebY-XC-7XdOb1lVoW0mOCyjCHouzbIFqg-cxQCaGHml0UCFrNLD_bJfsTHaFoE5YDm3aK4FTPYsrEj-wh9as9VVpe3tGAtrW9o=w549-h732-no");
+   background-image:linear-gradient(to bottom, #777 0%, #333 100%), url("http://farm6.static.flickr.com/5070/5656326403_f02e79bb8e.jpg");
     background-blend-mode: multiply;
   }
 
   .bgimg-3:hover {
-    background-image:linear-gradient(to bottom, #999 0%, #999 100%), url("https://lh3.googleusercontent.com/8ndY8TD_5YdKXou99Ou5MtqwNo6TXHEBcbn0mS7Rhfq-Riw-AOpmSdDobuNHT3PVkN1Ux62sGGBaOcMbwz38KHS662Kp3vn-56MA3Gq4u3sBcsRrogSfgK-wIj02mAvxZYP757QnCYRIo856DPWEh9G-axZny5AwCOkLUwhTbbTv525Px760VVVdsPtLiK40A5fkJa7scNS8p_yEMbgVKWF2IhBGg5Y1_3-AX4LD8O2gekKMVyXOljJ-eU965z6b33tX3ts-u5TOBMRJOM3BTHBkpvElQ6KJiSVQPrDUuPKA2V9r25_2cl3I_6u7AqapyxQzXVCsuL1f1TTslplrBkMpW78j-He3P-CQYYcM7y737S2WBDzRDOZX1okZvUzZaOEoV0sry1dG1u9W89xvN8jRm_A5plKYzhoV4UB-uRwRsOTcGxEHpWeaE-96onj3XXyfADNey7tpTaY6Y4Np4KP2uuHHqcmNrzmCKNWatbSOPT_8OwTdaSQCVMSQNZgl0r7iFpFY691nLmQhOMpRIfjcbN6RfTta8rF2KzQetTVK3qp4VDiUEvw--Qvy33U2Gi4RdoZE5ebY-XC-7XdOb1lVoW0mOCyjCHouzbIFqg-cxQCaGHml0UCFrNLD_bJfsTHaFoE5YDm3aK4FTPYsrEj-wh9as9VVpe3tGAtrW9o=w549-h732-no");
+    background-image:linear-gradient(to bottom, #999 0%, #999 100%), url("http://farm6.static.flickr.com/5070/5656326403_f02e79bb8e.jpg");
      background-blend-mode: multiply;
    }
 
@@ -227,6 +227,10 @@ a {
   font-weight: 300;
   color: #fff;
   margin: 0 30px;
+}
+
+.carouselactive {
+  border-top: 1px solid white;
 }
 
 .carouseltitle:hover {
@@ -342,11 +346,13 @@ p {
   margin-bottom: -10px;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "brandon grotesque", sans-serif;
+  text-transform: uppercase;
+}
+h1 {
   font-weight: 500;
   letter-spacing: 6px;
-  text-transform: uppercase;
   font-size: 2em;
   color: #fff;
 
@@ -359,37 +365,33 @@ h2{
 .space {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: .8em "brandon grotesque", sans-serif;
+  font-size: .8em;
   color: #777;
   font-weight: lighter;
+
 }
 
 h3 {
   letter-spacing: 3px;
-  text-transform: uppercase;
-  font: 12px "brandon grotesque", sans-serif;
+  font-size: 12px;
   font-weight: 300;
   opacity: .9;
 }
 
 h4 {
   letter-spacing: 2px;
-  text-transform: uppercase;
-  font: 12px "brandon grotesque", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
   color: #111;
 }
 
-h5 {
-  text-transform: uppercase;
-  font: 10px "brandon grotesque", sans-serif;
+h5, h6 {
+  letter-spacing: 2px;
+  font-size: 10px ;
   font-weight:700;
-  color: #111;
 }
 
 h6 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font: 10px "brandon grotesque", sans-serif;
   font-weight: 500;
   opacity: .8;
 }
@@ -449,6 +451,28 @@ ol h6 {
     min-height:200px;
   }
 
+  @keyframes blink {
+      0% {
+          opacity: 1;
+      }
+      45% {
+          opacity: .1;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+
+#btmstrip img {
+      animation: blink 3s;
+      animation-iteration-count: infinite;
+
+  }
+
+.bottom {
+  padding-top: 1%;
+}
+
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 900px) {
@@ -460,11 +484,14 @@ ol h6 {
 </head>
 <body>
 
-<div class="logo"></div>
+<div class="logo">
+<img src="http://yuapostrophe.com/wp-content/themes/yuapostrophe/images/yu-logo.svg" height="40"></div>
 <div class="nav">
-  <div class="navitem">About</div>
+  <div class="navitem">Login/Signup</div>
   <div class="navitem">Experiences</div>
-  <div class="navitem">...</div>
+  <div class="navitem">About</div>
+  <div class="navitem">Contact</div>
+  <div class="navitem">Cart</div>
 </div>
 
 <div class="bgimg-1">
@@ -479,7 +506,7 @@ ol h6 {
     <a href="#btmstrip"><div class="button">Choose your Experience</div></a>
   </div>
   <div class="carouselpicker">
-    <div class="carouseltitle">Experience</div>
+    <div class="carouseltitle carouselactive">Experience</div>
     <div class="carouseltitle">Immerse</div>
     <div class="carouseltitle">Mastery</div>
     <div class="carouseltitle">Losing/Finding</div>
@@ -488,8 +515,12 @@ ol h6 {
 
 <div id="btmstrip">
   <div class="redlogo"></div>
-  <span class="space">Start your journey</span>
+  <div class="space">Start your journey</div>
+  <div class="bottom">
+  <img src="http://bit.ly/2rxGP6E" height="13">
 </div>
+</div>
+
 
 <!--experience menu-->
 
