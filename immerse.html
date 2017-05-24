@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <style>
 body, html {
-  height: 90%;
+  height: 93%;
   margin: 0;
   font: 1em "lato", sans-serif;
   font-weight: lighter;
@@ -59,13 +58,13 @@ a {
 }
 
 .redlogo {
-  background-image: url(https://lh3.googleusercontent.com/cgsvlwrxip2Mv3rBenktPw33jRTP2gdSehFke_Em1Mjj58rpE04mW8w09p8C48_6kAb-CIMCCEWKcE18qMALIuVMWygGfbVVLE3s7j7Y-iWFzlpLoLeylqU_fmQvb2luitPViRzhA_0hUElzCwMtFg3CxI_puvfPymXUK85TiiL145zImm7jx6LIfnp_iLAsG1uY_znXRJ2ytDkNFEbZ0xv_-7N2q-kVDtMh223BhEDqGkgw_eu2k3VkiyF3gV53fSUaUfWg1tVaIRQ_FmrAlW8fVOD5SPBiAt0GDWMYocbHf12rSSsqYmbLdZAAnzLTD4-lpJlAgOLjzpE3T2lkW2PSIopE7zIPGCdwuxaqyj79uNEzQapmf6U1qvTtjFMy68hEfWxIsmKi6EarF-RddhYbu4Vukx9yWebDbMq4Ogl9nmmOoJp0uY5LrbTeU6zeP2mlhc62Q1jQO9vSNWYMedT_I8msNDv43X9ZK6UlZRFQB8AaS0V9PwzwUyEqfYH5sc5rm7tU2qm2y_buVaO7drlJPdQIEKul3UyxaloOKJuhd4Px2usEjOOWKRPfxRNyl-GdORop_4p8JRSpFjssMDNacUowNVv3BGWDA9Y1llzMhMExbS8WyB_FAeKti8ePLZxlROq7lhwwz6vFbU_PAo81zsKwm6Lb9hiCsvA0cqk=s198-no);
-  background-size: 30px;
+  opacity: 1;
+  background-image: url(http://yuapostrophe.com/wp-content/themes/yuapostrophe/images/yu-logo.svg);
+  background-size: 120px;
   background-repeat: no-repeat;
   background-position: center;
-  height: 30px;
+  height: 120px;
   width: 100%;
-  padding-top: 3%;
 }
 
 .nav {
@@ -203,7 +202,7 @@ a {
   }
 
 #btmstrip {
-  height: 25%;
+  height: 17%;
 }
 
 #btmstrip h4 {
@@ -227,7 +226,8 @@ a {
 .carouselpicker {
   height: 36px;
   justify-content: baseline;
-
+  font-weight: 500;
+  font-size: 10px;
 }
 
 .carouseltitle {
@@ -236,18 +236,23 @@ a {
   display: inline-block;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 300;
-  color: #fff;
   margin: 0 30px;
 }
 
 .carouselactive {
   border-top: 1px solid white;
+  color: white;
 }
 
-.carouseltitle:hover {
+.carouseltitle a {
+  padding: 8px 0px 0px 0px;
+  color: white;
+  opacity: .5;
+}
+.carouseltitle a:hover {
+
   border-top: 1px solid white;
+  opacity: 1.0;
 }
 
 p {
@@ -378,6 +383,7 @@ h2{
 .space {
   letter-spacing: 5px;
   text-transform: uppercase;
+  padding-top:2.5%;
   font-size: .8em;
   color: #777;
   font-weight: 300;
@@ -402,6 +408,10 @@ h5, h6 {
   letter-spacing: 2px;
   font-size: 10px ;
   font-weight:700;
+}
+
+h5 {
+  color: #1e1f20;
 }
 
 h6 {
@@ -514,27 +524,25 @@ ol h6 {
 <div class="bgimg-1">
   <div class="caption">
     <div class="blurb">
-    <h1>EXPERIENCE HONG KONG IN A WHOLE NEW WAY.</h1>
-      <p>Yu’ offers engaging experiences with respected masters of time-honored practices who will provide you a deeper understanding of this city’s rich and vibrant culture. </p>
-
-      <p>Discover its many hidden layers and rich meaning beyond the crowds and skyscrapers.</p>
+      <div class="redlogo"></div>
+    <h1>IMMERSE YOURSELF IN OUR WORLD OF LOCAL TRADITIONS.</h1>
+      <p>Yu’ brings you the essence of Hong Kong through multiple facets of Cantonese culture and it’s underlying body of knowledge. See Hong Kong through the eyes of the masters.</p>
     </div>
     <br><br>
     <a href="#btmstrip"><div class="button">Choose your Experience</div></a>
   </div>
   <div class="carouselpicker">
     <div class="carouseltitle"><a href="./index.html">Experience</a></div>
-    <div class="carouseltitle carouselactive"><a href="./immerse.html">Immerse</a></div>
+    <div class="carouseltitle carouselactive">Immerse</div>
     <div class="carouseltitle"><a href="./mastery.html">Mastery</a></div>
     <div class="carouseltitle"><a href="./losingfinding.html">Losing/Finding</a></div>
   </div>
 </div>
 
 <div id="btmstrip">
-  <div class="redlogo"></div>
   <div class="space">Start your journey</div>
   <div class="bottom">
-  <img src="http://bit.ly/2rxGP6E" height="13">
+  <a href="#btmstrip"><img src="http://bit.ly/2rxGP6E" height="13"></a>
 </div>
 </div>
 
