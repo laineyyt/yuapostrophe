@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  height: 90%;
+  margin: 0;
+  font: 1em "lato", sans-serif;
+  font-weight: lighter;
+  line-height: 1.3;
+  text-align: center;
+  color: #777;
+}
+
+a {
+  text-decoration: none;
+  color: #1e1f20;
+}
+
+.button {
+  border: 1px solid white;
+  padding: 12px 28px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-transition-duration: 1.2s; /* Safari */
+  transition-duration: 1.2s;
+}
+
+.button:hover {
+  background-color: white;
+  opacity: .60;
+  color: black;
+}
+
+.join .button {
+  background-color:#1e1f20 ;
+  -webkit-transition-duration: 1.2s; /* Safari */
+  transition-duration: 1.2s;
+  width: 100px;
+  margin: auto;
+}
+
+.join .button:hover {
+  background-color: #999;
+  color: #111;
+}
+
+.logo {
+  background-color: #1e1f20 ;
+  height: 48px;
+  width: 55px;
+  position: fixed;
+  padding-top:7.5px;
+  z-index: 2;
+}
+
+.redlogo {
+  background-image: url(https://lh3.googleusercontent.com/cgsvlwrxip2Mv3rBenktPw33jRTP2gdSehFke_Em1Mjj58rpE04mW8w09p8C48_6kAb-CIMCCEWKcE18qMALIuVMWygGfbVVLE3s7j7Y-iWFzlpLoLeylqU_fmQvb2luitPViRzhA_0hUElzCwMtFg3CxI_puvfPymXUK85TiiL145zImm7jx6LIfnp_iLAsG1uY_znXRJ2ytDkNFEbZ0xv_-7N2q-kVDtMh223BhEDqGkgw_eu2k3VkiyF3gV53fSUaUfWg1tVaIRQ_FmrAlW8fVOD5SPBiAt0GDWMYocbHf12rSSsqYmbLdZAAnzLTD4-lpJlAgOLjzpE3T2lkW2PSIopE7zIPGCdwuxaqyj79uNEzQapmf6U1qvTtjFMy68hEfWxIsmKi6EarF-RddhYbu4Vukx9yWebDbMq4Ogl9nmmOoJp0uY5LrbTeU6zeP2mlhc62Q1jQO9vSNWYMedT_I8msNDv43X9ZK6UlZRFQB8AaS0V9PwzwUyEqfYH5sc5rm7tU2qm2y_buVaO7drlJPdQIEKul3UyxaloOKJuhd4Px2usEjOOWKRPfxRNyl-GdORop_4p8JRSpFjssMDNacUowNVv3BGWDA9Y1llzMhMExbS8WyB_FAeKti8ePLZxlROq7lhwwz6vFbU_PAo81zsKwm6Lb9hiCsvA0cqk=s198-no);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 100%;
+  padding-top: 3%;
+}
+
+.nav {
+  background-color: #1e1f20 ;
+  height: 36px;
+  position: fixed;
+  right: 0px;
+  color: #fff;
+  clear:left;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight:500;
+  z-index: 1;
+  padding: 0px 10px;
+}
+
+.navitem {
+  float: left;
+  padding:13px;
+}
+
+.bgimg-1 {
+  background-image: linear-gradient(to bottom, #fff 0%, #999 100%), url(http://yuapostrophe.com/wp-content/uploads/2017/03/IMG_8162-2.jpg);
+  background-size: cover;
+  background-position:center bottom;
+  opacity: 1;
+  min-height: 100%;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Block Version
+
+.bgimg-2 {
+  background-image: url("https://photos-2.dropbox.com/t/2/AAD94IOabQLNeR-6fHGkcsfiPsZhYl3mXIsMYljEKWsaCw/12/20163978/jpeg/32x32/1/_/1/2/IMG_3976.jpg/EKXshqsFGCogAigC/PZkNSz8RiLOB8TBonIvJOHiVZ3Sy1khhsQSyrx3SG2g?size=1280x960&size_mode=3");
+  background-size: 65%;
+  background-position: left;
+  min-height: 400px;
+  width: 60%;
+  left:5%;
+  clear:both;
+}
+
+.bgimg-3 {
+  background-image: url("https://photos-1.dropbox.com/t/2/AACZBz9KWK7-wz38MAk0-VxNitmtnOBVg5koUP1HvkslRQ/12/20163978/jpeg/32x32/1/_/1/2/CITYOFENERGY.jpg/EKXshqsFGCogAigC/FymGA84pNss-IlkDUcwJocssL5ry6vpueRCfcY6LE6U?size=1280x960&size_mode=3");
+  background-size: 65%;
+  background-position: right;
+  min-height: 400px;
+  width: 60%;
+  float: right;
+  right: 5%;
+  clear:both;
+}
+
+.bgimg-4 {
+  background-image: url("https://lh3.googleusercontent.com/d_JZOtNKfEaxEmPT-4o0gdeZqCp7u_2f8I9ryLF4T1iaZcqqE-wP83mJtFOs9MULSVdZcMhMSpGadgaLYMpZEtNzoIQOLYbTVwoPNm1dAtnNCcHR1CT6_7DEpN7xa2hUX387IVlr9l8ed6tsuKEO0cKTxK24qrjkDNvbdYSjv__9e1iUEmmpPGSKOr_m1qFGz-uhEyt-tlFzqpFpebqcKf91m7N7deI8YGtxgRDQ5oTaq4ZqpRVntCfjfoJT5yxNw_7Fm0fIeAGieEJrsbStifDk6_JsUs1NpgddNMMWKlTkSWZnb0zS187lna1epuFKpHBfbfGl6cGS96FwxkfaQo0BdvwkoJfv4oXLvek1Cs-4VPx8xzhYPM5KetlOGYSfXnGXh9q3qvbs0XaxED3DFWGfD_e3-FaOIyg0OVC-zNuMyMZPNdOM1elPh3R509w5cinVsAPt4Y_pUk_X2qZHkufOon3NkiNeSdZHIAEgHpNJwBCZqhX4NK3iBUFtDf_bwYskoiiTB13ahUSoYsOFk4PDfsyvcVBCIgTV_tdCJOh0Hzxr2vWKusqkhcBpdX2CttRH24huPv_-_-7WW67P3Wfjk2KcuVdwMMEJXwDPLHS8vx0V_MX0mMi478qVeE1r3XtIAckNTkeGcjr6ezwuAfM-cXNmsJJ9j_wBaNfcBE4=w582-h776-no");
+  background-size: 65%;
+  background-position: left;
+  min-height: 400px;
+  width: 60%;
+  left:5%;
+  clear:both;
+}
+ */
+.bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
+  background-size: cover;
+  background-position: center;
+  min-height: 440px;
+}
+
+ .bgimg-2 {
+   background-image: linear-gradient(to bottom, #777 0%, #333 100%), url("https://lh3.googleusercontent.com/ZEbD1xRV7u2-OOy5hz5HtnWjSOeJ7zmfms5JHvuMf20BSQj-uoL2gsKEmgitsMiPz7BY0NLvSLhfB0lpWO54ciKGLqFpdEP8NLap4U9PC5_2NLAa8QH81hYXC0IsRsSL70b4FDrPcGgi3CCK0R4anpOzUDNBKjjSD0xtrtFLL40uLHEBEWe6asdw4fB3Gpr7s_gbtK1vTD8yggDHb9-M9MShSrHIuugcbmJL7QuhO9mDwx8p0jk9S5eQue2ip1clQSaPzaSQQufD7XCwM47NW7QUKpEn9s11JIawhIca_I9UmGEdsICOcj7Ge3XYzh93N3qK32o6Fs-akg9rgmXEGrOeBhA5F9gimKmaw_aUTk1EpHLxD4JSr9DyW6xH3nhusw-cD2DOO9Jn51hT-lKLOjgK3PA_a_F9ncBGUHVmreb5lMyPSMdQ_IsRa2ZENSY_P8uPR2lmG0oqq_JUEXCqwVmXn2Jb4UGx2U3eHOjEw6idgSj26bVnNOI5-PfERRpCsJFzn9Zf_bdoF_2j6PeGSrR1i-2z_qhvM0_a8K3NNRHocX7F2GjMuueUdlCcAYO8u0EjO5kDTzJKZjgeyi-1kh1XdigoOmYGHHSW0vfr64WqN6hqI6qdI2BJnu2sZ5-j-GLphvbi7iUMutu_sD1fcVDRyiRlA2iziLt1VTBiquM=w549-h732-no");
+   background-blend-mode: multiply;
+   -webkit-transition-duration: 0.4s ease .2s; /* Safari */
+   transition-duration: 0.4s ease .2s;
+ }
+
+ .bgimg-2:hover {
+     background-image: linear-gradient(to bottom, #999 0%, #999 100%), url("https://lh3.googleusercontent.com/ZEbD1xRV7u2-OOy5hz5HtnWjSOeJ7zmfms5JHvuMf20BSQj-uoL2gsKEmgitsMiPz7BY0NLvSLhfB0lpWO54ciKGLqFpdEP8NLap4U9PC5_2NLAa8QH81hYXC0IsRsSL70b4FDrPcGgi3CCK0R4anpOzUDNBKjjSD0xtrtFLL40uLHEBEWe6asdw4fB3Gpr7s_gbtK1vTD8yggDHb9-M9MShSrHIuugcbmJL7QuhO9mDwx8p0jk9S5eQue2ip1clQSaPzaSQQufD7XCwM47NW7QUKpEn9s11JIawhIca_I9UmGEdsICOcj7Ge3XYzh93N3qK32o6Fs-akg9rgmXEGrOeBhA5F9gimKmaw_aUTk1EpHLxD4JSr9DyW6xH3nhusw-cD2DOO9Jn51hT-lKLOjgK3PA_a_F9ncBGUHVmreb5lMyPSMdQ_IsRa2ZENSY_P8uPR2lmG0oqq_JUEXCqwVmXn2Jb4UGx2U3eHOjEw6idgSj26bVnNOI5-PfERRpCsJFzn9Zf_bdoF_2j6PeGSrR1i-2z_qhvM0_a8K3NNRHocX7F2GjMuueUdlCcAYO8u0EjO5kDTzJKZjgeyi-1kh1XdigoOmYGHHSW0vfr64WqN6hqI6qdI2BJnu2sZ5-j-GLphvbi7iUMutu_sD1fcVDRyiRlA2iziLt1VTBiquM=w549-h732-no");
+     background-blend-mode: multiply;
+ }
+
+ .bgimg-3 {
+   background-image:linear-gradient(to bottom, #777 0%, #333 100%), url("http://farm6.static.flickr.com/5070/5656326403_f02e79bb8e.jpg");
+    background-blend-mode: multiply;
+  }
+
+  .bgimg-3:hover {
+    background-image:linear-gradient(to bottom, #999 0%, #999 100%), url("http://farm6.static.flickr.com/5070/5656326403_f02e79bb8e.jpg");
+     background-blend-mode: multiply;
+   }
+
+ .bgimg-4 {
+   background-image:linear-gradient(to bottom, #777 0%, #333 100%), url("https://lh3.googleusercontent.com/d_JZOtNKfEaxEmPT-4o0gdeZqCp7u_2f8I9ryLF4T1iaZcqqE-wP83mJtFOs9MULSVdZcMhMSpGadgaLYMpZEtNzoIQOLYbTVwoPNm1dAtnNCcHR1CT6_7DEpN7xa2hUX387IVlr9l8ed6tsuKEO0cKTxK24qrjkDNvbdYSjv__9e1iUEmmpPGSKOr_m1qFGz-uhEyt-tlFzqpFpebqcKf91m7N7deI8YGtxgRDQ5oTaq4ZqpRVntCfjfoJT5yxNw_7Fm0fIeAGieEJrsbStifDk6_JsUs1NpgddNMMWKlTkSWZnb0zS187lna1epuFKpHBfbfGl6cGS96FwxkfaQo0BdvwkoJfv4oXLvek1Cs-4VPx8xzhYPM5KetlOGYSfXnGXh9q3qvbs0XaxED3DFWGfD_e3-FaOIyg0OVC-zNuMyMZPNdOM1elPh3R509w5cinVsAPt4Y_pUk_X2qZHkufOon3NkiNeSdZHIAEgHpNJwBCZqhX4NK3iBUFtDf_bwYskoiiTB13ahUSoYsOFk4PDfsyvcVBCIgTV_tdCJOh0Hzxr2vWKusqkhcBpdX2CttRH24huPv_-_-7WW67P3Wfjk2KcuVdwMMEJXwDPLHS8vx0V_MX0mMi478qVeE1r3XtIAckNTkeGcjr6ezwuAfM-cXNmsJJ9j_wBaNfcBE4=w582-h776-no");
+    background-blend-mode: multiply;
+  }
+
+  .bgimg-4:hover {
+    background-image:linear-gradient(to bottom, #999 0%, #777 100%), url("https://lh3.googleusercontent.com/d_JZOtNKfEaxEmPT-4o0gdeZqCp7u_2f8I9ryLF4T1iaZcqqE-wP83mJtFOs9MULSVdZcMhMSpGadgaLYMpZEtNzoIQOLYbTVwoPNm1dAtnNCcHR1CT6_7DEpN7xa2hUX387IVlr9l8ed6tsuKEO0cKTxK24qrjkDNvbdYSjv__9e1iUEmmpPGSKOr_m1qFGz-uhEyt-tlFzqpFpebqcKf91m7N7deI8YGtxgRDQ5oTaq4ZqpRVntCfjfoJT5yxNw_7Fm0fIeAGieEJrsbStifDk6_JsUs1NpgddNMMWKlTkSWZnb0zS187lna1epuFKpHBfbfGl6cGS96FwxkfaQo0BdvwkoJfv4oXLvek1Cs-4VPx8xzhYPM5KetlOGYSfXnGXh9q3qvbs0XaxED3DFWGfD_e3-FaOIyg0OVC-zNuMyMZPNdOM1elPh3R509w5cinVsAPt4Y_pUk_X2qZHkufOon3NkiNeSdZHIAEgHpNJwBCZqhX4NK3iBUFtDf_bwYskoiiTB13ahUSoYsOFk4PDfsyvcVBCIgTV_tdCJOh0Hzxr2vWKusqkhcBpdX2CttRH24huPv_-_-7WW67P3Wfjk2KcuVdwMMEJXwDPLHS8vx0V_MX0mMi478qVeE1r3XtIAckNTkeGcjr6ezwuAfM-cXNmsJJ9j_wBaNfcBE4=w582-h776-no");
+     background-blend-mode: multiply;
+   }
+
+.bgimg-5 {
+  background-image:linear-gradient(to bottom, #777 0%, #333 100%), url("https://lh3.googleusercontent.com/GKWWKFrjp1FAmFhjf0xn9xkbdvejz9y34N7XC1Lo3DpmGFDjBhsc3j3JnkIFaMxVhqjBnST1fmguSkrM3joTRtlRPNaE9jq4PkD5_7mOFVSh5b414_hyubUXxSxvKgmB67A1y93Tr084LsuxZjeAhsRhp2cZVrGtMCi-62tI7FNjd-AslGDOBYIKLNaFKRu8EcHEFEEGjctHXXdkElgiRWsN7cS7X070rDrcUfNZysZcGcTfUiBFHAB30mwWajZjxSe_pM1SDxFGMfreTC11TrhSLJzx4KMtzLhw3lb901YWzYTXuW5_PCBT6gKT-tiPFXD_rBu394bk94AlqpONnOsNlD1sJ9GGt2iNjGOsAZ3tIpICwbpE8Hmu6Dk0vtAe5uWhyBQbwSFYocIlmcDrCPb1wZHgM-HXn9gDcEdVOAuWC6ye4ff2Dnh_7r8DlElPXnrlgsk23x_dtrElECw9ICknyumNi3g31HjwbNTDoEEtNu4fg9x932NYAGimYYDrrKqn1YWwM0mkhgqJZ1TygYxGLKBXRL1bM0QmO_oaRKh4fHB7z4cAsRXvYVWiJ7shqBci8kkgp8U6-uZqvUsbywHIESWLM8Q5pLghwi9hmrKOXkC6E5610Eb5yKH2wsp_5qk0z9ugY_kwCDBwYYpl32VuyTmPhOsXm77WMdYnZGw=s776-no");
+   background-blend-mode: multiply;
+ }
+
+ .bgimg-5:hover {
+   background-image:linear-gradient(to bottom, #999 0%, #777 100%), url("https://lh3.googleusercontent.com/GKWWKFrjp1FAmFhjf0xn9xkbdvejz9y34N7XC1Lo3DpmGFDjBhsc3j3JnkIFaMxVhqjBnST1fmguSkrM3joTRtlRPNaE9jq4PkD5_7mOFVSh5b414_hyubUXxSxvKgmB67A1y93Tr084LsuxZjeAhsRhp2cZVrGtMCi-62tI7FNjd-AslGDOBYIKLNaFKRu8EcHEFEEGjctHXXdkElgiRWsN7cS7X070rDrcUfNZysZcGcTfUiBFHAB30mwWajZjxSe_pM1SDxFGMfreTC11TrhSLJzx4KMtzLhw3lb901YWzYTXuW5_PCBT6gKT-tiPFXD_rBu394bk94AlqpONnOsNlD1sJ9GGt2iNjGOsAZ3tIpICwbpE8Hmu6Dk0vtAe5uWhyBQbwSFYocIlmcDrCPb1wZHgM-HXn9gDcEdVOAuWC6ye4ff2Dnh_7r8DlElPXnrlgsk23x_dtrElECw9ICknyumNi3g31HjwbNTDoEEtNu4fg9x932NYAGimYYDrrKqn1YWwM0mkhgqJZ1TygYxGLKBXRL1bM0QmO_oaRKh4fHB7z4cAsRXvYVWiJ7shqBci8kkgp8U6-uZqvUsbywHIESWLM8Q5pLghwi9hmrKOXkC6E5610Eb5yKH2wsp_5qk0z9ugY_kwCDBwYYpl32VuyTmPhOsXm77WMdYnZGw=s776-no");
+    background-blend-mode: multiply;
+  }
+
+.bgimg-6 {
+  background-image:linear-gradient(to bottom, #777 0%, #333 100%), url("https://lh3.googleusercontent.com/3_jR6AdWlVdGngTGjVt0a0EDu7fmSMN_vhJXLVKUdHuOMBPTBvz_YOiLdnCF4rgPDUK1cXTrOmk43NvJnLmteSYH5_ckS27tibdSXspLbWxoayCOoMr8bMCbmRDaNUsKc61zRrr_myocZTSqFdu9ajNNmztA2cLibIoRHFZHVzoE9jzgERa7mQV1E0zk4852jCjrEyCqv-kFBPxfSTOlsJRue__VJTTQk8Dv2OO2Y4j49ipBzqhOXnqXzz1iRSJ_TjFUBHzjknKbd6MmiRh7EOel6MVvaho7sDXf0hYFWEDIHJcsVFlq0TsBDComid2n9bmNbh_cIdMliberNg-0YsxE_IRYknHhBAABBFykXmIqTd-vQFKSrnc6xoN4X8Rep7SLe3K1KNphRuXvYUvmRY_lCU6eqVcoYv0MiFoeQnjrgph2HjuUKzv49fDm3iKl4jbQQAKHgKjvbRO37Ir5hJIIy7PQ2toiFuzZ9QicrJms52nntVR9apuBc07FQ88YZCJHfOdS0e0KKW-lEIcpDNk38RgcH9Bd5ZbNkPS1EkWJvD4LeCVWBp1KcR24EtDEwfnBxe8Zv_XEAd6Qqv2mqiVrS0UGJCcoKjtlP36aMMCzuog9SpgHWC-Sh7PDEByLXOsvmWF68xi9hQry7HS1mG8IEnZ9z7Ki4_A2ajHQAvw=w1125-h750-no");
+   background-blend-mode: multiply;
+ }
+
+ .bgimg-6:hover {
+   background-image:linear-gradient(to bottom, #999 0%, #777 100%), url("https://lh3.googleusercontent.com/3_jR6AdWlVdGngTGjVt0a0EDu7fmSMN_vhJXLVKUdHuOMBPTBvz_YOiLdnCF4rgPDUK1cXTrOmk43NvJnLmteSYH5_ckS27tibdSXspLbWxoayCOoMr8bMCbmRDaNUsKc61zRrr_myocZTSqFdu9ajNNmztA2cLibIoRHFZHVzoE9jzgERa7mQV1E0zk4852jCjrEyCqv-kFBPxfSTOlsJRue__VJTTQk8Dv2OO2Y4j49ipBzqhOXnqXzz1iRSJ_TjFUBHzjknKbd6MmiRh7EOel6MVvaho7sDXf0hYFWEDIHJcsVFlq0TsBDComid2n9bmNbh_cIdMliberNg-0YsxE_IRYknHhBAABBFykXmIqTd-vQFKSrnc6xoN4X8Rep7SLe3K1KNphRuXvYUvmRY_lCU6eqVcoYv0MiFoeQnjrgph2HjuUKzv49fDm3iKl4jbQQAKHgKjvbRO37Ir5hJIIy7PQ2toiFuzZ9QicrJms52nntVR9apuBc07FQ88YZCJHfOdS0e0KKW-lEIcpDNk38RgcH9Bd5ZbNkPS1EkWJvD4LeCVWBp1KcR24EtDEwfnBxe8Zv_XEAd6Qqv2mqiVrS0UGJCcoKjtlP36aMMCzuog9SpgHWC-Sh7PDEByLXOsvmWF68xi9hQry7HS1mG8IEnZ9z7Ki4_A2ajHQAvw=w1125-h750-no");
+    background-blend-mode: multiply;
+  }
+
+#btmstrip {
+  height: 25%;
+}
+
+#btmstrip h4 {
+  margin-top:-5px;
+}
+
+.caption {
+  color:#777;
+  text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.caption p {
+  color: #fff;
+}
+
+.carouselpicker {
+  height: 36px;
+  justify-content: baseline;
+
+}
+
+.carouseltitle {
+  padding: 8px 0px 0px 0px;
+  align-items: center;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 300;
+  color: #fff;
+  margin: 0 30px;
+}
+
+.carouselactive {
+  border-top: 1px solid white;
+}
+
+.carouseltitle:hover {
+  border-top: 1px solid white;
+}
+
+p {
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+.centervh {
+  margin: auto;
+  vertical-align: middle;
+  width: 80%;
+  text-align:center;
+}
+
+.description {
+  min-height: 400px;
+  overflow:scroll;
+  position:relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+
+/*.description div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+}*/
+
+.description h6 {
+  opacity: 1;
+}
+
+.blurb {
+  width: 82%;
+  margin: auto;
+}
+
+.info {
+  display: inline-block;
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+}
+
+.blocks {
+    padding: 0px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer {
+  padding: 5px 0px;
+  flex-basis:150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+}
+
+.description2 {
+  min-height: 400px;
+  overflow:hidden;
+  position:relative;
+  float: left;
+  left: 0;
+  width:40%;
+}
+
+.description2 div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.expcaption {
+  color:#777;
+  text-align:center;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.smvline {
+  background-image: url(https://lh3.googleusercontent.com/QsaMnU45nr766QUBhPVnLStgOJTIpVHSBSlWQ_WJkR8_aTFjFwadNTCRrdl7CFterIvFeZPdC3Mq0DRqjXHekVY3ItzpwY9Re62ZJqF94rOEPg7mMeNYc-VtFn_FjGk3SZtAO2Sn3hhkH0l_YT5DXVhRrFmUKoHAlM4DC0JDoY7BrnJx7cFh7C28PhiM1fsV29VhKgjWS0Oom8mpuDJBSiNLoAAKTzJDpyBTuJqBGzXPnv3e2TcVE9nI0tFJd48eJlQBTaEN6hKnagRVJbMfo3lpVjw0fLN6ZHmnrlgoAKpVyUEKa2-5jDY-Dkwp3pDv047lFFiAXD-UNK68ERGUwL3tpsAWEFJBm0QRlQDj1YMEl-p7Dqxlm4SRfhIj9WXjPo9zchrMnUc8wiRN3bK6XycjYBXNeYC8ZcvxsMQ_HZ5W973Avh90CW7nCe_S-U0RiIujp8m_YhN9mBNCuTwhxrauU7VqsGkYhbv0VeZpWu_XktopE04zqEqbBS5HLbKwbTA7H1XLZiQwfpmKdiQFXuS0bFmThQoxjqIXlUbhjSeV2-5FNH8oOTbJbHoB2jDtTlFmNkV_jfQtLysL9pM354Caltw_dxy8STr4Vao8pSjno7idZZ5Q8KDaQt6PbK1yN-ZTBo-IDKpVzFgmDReMEqL7H0vAfZPyfUXX7tvZ4qg=w17-h57-no);
+  background-size: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "brandon grotesque", sans-serif;
+  text-transform: uppercase;
+}
+h1 {
+  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 2em;
+  color: #fff;
+
+}
+
+h2{
+
+}
+
+.space {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: .8em;
+  color: #777;
+  font-weight: 300;
+
+}
+
+h3 {
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: .9;
+}
+
+h4 {
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #111;
+}
+
+h5, h6 {
+  letter-spacing: 2px;
+  font-size: 10px ;
+  font-weight:700;
+}
+
+h6 {
+  font-weight: 500;
+  opacity: .8;
+}
+
+ul,ol {
+  margin: auto;
+  padding: 0;
+}
+
+ol h6 {
+  margin-top: -15px;
+}
+
+.within, .beyond {
+  width:33.3%;
+  float:left;
+}
+
+.around {
+  width:33%;
+  float:left;
+  border-right: 1px dotted #777;
+  border-left: 1px dotted #777;
+}
+
+.exp {
+  padding-top:100px;
+}
+
+#expmenu{
+  margin: auto;
+  width: 100%;
+  min-height: 100px;
+  text-align: center;
+}
+
+#invisible {}
+#cityenergy {}
+#beyond {}
+#codifying {}
+#chart {}
+
+  .join {
+    min-height: 150px;
+    padding:100px;
+  }
+
+  .entry {
+    width:25%;
+    height: 36px;
+    border: 1px solid #777;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-right: 3px;
+
+  }
+
+  #footer {
+    background-color: #000;
+    min-height:200px;
+  }
+
+  @keyframes blink {
+      0% {
+          opacity: 1;
+      }
+      45% {
+          opacity: .1;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+
+#btmstrip img {
+      animation: blink 3s;
+      animation-iteration-count: infinite;
+
+  }
+
+.bottom {
+  padding-top: 1%;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 900px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="logo">
+<img src="http://yuapostrophe.com/wp-content/themes/yuapostrophe/images/yu-logo.svg" height="40"></div>
+<div class="nav">
+  <div class="navitem">Login/Signup</div>
+  <div class="navitem">Experiences</div>
+  <div class="navitem">About</div>
+  <div class="navitem">Contact</div>
+  <div class="navitem">Cart</div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <div class="blurb">
+    <h1>EXPERIENCE HONG KONG IN A WHOLE NEW WAY.</h1>
+      <p>Yu’ offers engaging experiences with respected masters of time-honored practices who will provide you a deeper understanding of this city’s rich and vibrant culture. </p>
+
+      <p>Discover its many hidden layers and rich meaning beyond the crowds and skyscrapers.</p>
+    </div>
+    <br><br>
+    <a href="#btmstrip"><div class="button">Choose your Experience</div></a>
+  </div>
+  <div class="carouselpicker">
+    <div class="carouseltitle"><a href="./index.html">Experience</a></div>
+    <div class="carouseltitle carouselactive"><a href="./immerse.html">Immerse</a></div>
+    <div class="carouseltitle"><a href="./mastery.html">Mastery</a></div>
+    <div class="carouseltitle"><a href="./losingfinding.html">Losing/Finding</a></div>
+  </div>
+</div>
+
+<div id="btmstrip">
+  <div class="redlogo"></div>
+  <div class="space">Start your journey</div>
+  <div class="bottom">
+  <img src="http://bit.ly/2rxGP6E" height="13">
+</div>
+</div>
+
+
+<!--experience menu-->
+
+<div id="expmenu">
+  <div class="within">
+
+    <ul>
+      <ol><div class="smvline"></div></ol>
+      <ol><h5>Within</h5></ol>
+      <ol><h4><a href="#invisible">Invisible Connections</a></h4>
+      <h6>Traditional Chinese Medicine</h6></ol>
+    </ul>
+  </div>
+
+  <div class="around">
+    <ul>
+      <ol><div class="smvline"></div></ol>
+      <ol><h5>Around</h5></ol>
+      <ol><h4><a href="#cityenergy">City of Energy</a></h4>
+      <h6>Feng Shui</h6></ol>
+      <ol><h4><a href="#ceremony">Beyond the Ceremony</a></h4>
+      <h6>Tea</h6></ol>
+    </ul>
+  </div>
+
+  <div class="beyond">
+    <ul>
+      <ol><div class="smvline"></div></ol>
+      <ol><h5>Beyond</h5></ol>
+      <ol><h4><a href="#codifying">Codifying Possibilities</a></h4>
+      <h6>I-Ching, the Book of Changes</h6></ol>
+      <ol><h4><a href="#chart">Chinese Astrology Private Reading</a></h4>
+      <h6>Chinese Horoscope</h6></ol>
+    </ul>
+  </div>
+</div>
+
+<!--experiences list-->
+  <div class="exp">
+
+    <div id="invisible">
+      <div class="bgimg-2">
+        <div class="description">
+          <div>
+            <h3>&#8213; Traditional Chinese Medicine &#8213;</h3>
+            <h1>Invisible connections</h1>
+
+            <div class="blurb">
+              <p>Enjoy a private consultation and treatment while introducing you to the basic fundamentals of Chinese medicine</p>
+              <div class="info">
+
+                <div class="outer">
+                  <div class="blocks"><img src="http://bit.ly/2qe2QmM" height="15"></div>
+                  <div class="blocks">
+                  <h6>Causeway Bay</h6></div>
+                </div>
+
+                <div class="outer">
+                  <div class="block"><img src="http://bit.ly/2qhny4x" height="15"></div>
+                  <div class="blocks"><h6>90min</h6></div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+            <br>
+            <a href="./exp/invisible.html"><div class="button">Book Now</div></a>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="cityenergy">
+      <div class="bgimg-3">
+
+        <div class="description">
+          <div>
+            <h3>&#8213; Subject &#8213;</h3>
+            <h1>Title</h1>
+
+            <div class="blurb">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum enim lobortis nibh facilisis tincidunt. Etiam congue est quis lorem vulputate blandit. Quisque lacinia ut neque scelerisque mollis.</p>
+              <div class="info">
+
+                <div class="outer">
+                  <div class="blocks"><img src="http://bit.ly/2qe2QmM" height="15"></div>
+                  <div class="blocks">
+                  <h6>Location</h6></div>
+                </div>
+
+                <div class="outer">
+                  <div class="block"><img src="http://bit.ly/2qhny4x" height="15"></div>
+                  <div class="blocks"><h6>Time</h6></div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+            <br>
+            <a href="./exp/invisible.html"><div class="button">Book Now</div></a>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="beyond">
+      <div class="bgimg-4">
+        <div class="description">
+          <div>
+            <h3>&#8213; Subject &#8213;</h3>
+            <h1>Title</h1>
+
+            <div class="blurb">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum enim lobortis nibh facilisis tincidunt. Etiam congue est quis lorem vulputate blandit. Quisque lacinia ut neque scelerisque mollis.</p>
+              <div class="info">
+
+                <div class="outer">
+                  <div class="blocks"><img src="http://bit.ly/2qe2QmM" height="15"></div>
+                  <div class="blocks">
+                  <h6>Location</h6></div>
+                </div>
+
+                <div class="outer">
+                  <div class="block"><img src="http://bit.ly/2qhny4x" height="15"></div>
+                  <div class="blocks"><h6>Time</h6></div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+            <br>
+            <a href="./exp/invisible.html"><div class="button">Book Now</div></a>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="codifying">
+      <div class="bgimg-5">
+        <div class="description">
+          <div>
+            <h3>&#8213; Subject &#8213;</h3>
+            <h1>Title</h1>
+
+            <div class="blurb">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum enim lobortis nibh facilisis tincidunt. Etiam congue est quis lorem vulputate blandit. Quisque lacinia ut neque scelerisque mollis.</p>
+              <div class="info">
+
+                <div class="outer">
+                  <div class="blocks"><img src="http://bit.ly/2qe2QmM" height="15"></div>
+                  <div class="blocks">
+                  <h6>Location</h6></div>
+                </div>
+
+                <div class="outer">
+                  <div class="block"><img src="http://bit.ly/2qhny4x" height="15"></div>
+                  <div class="blocks"><h6>Time</h6></div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+            <br>
+            <a href="./exp/invisible.html"><div class="button">Book Now</div></a>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="beyond">
+      <div class="bgimg-6">
+        <div class="description">
+          <div>
+            <h3>&#8213; Subject &#8213;</h3>
+            <h1>Title</h1>
+
+            <div class="blurb">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum enim lobortis nibh facilisis tincidunt. Etiam congue est quis lorem vulputate blandit. Quisque lacinia ut neque scelerisque mollis.</p>
+              <div class="info">
+
+                <div class="outer">
+                  <div class="blocks"><img src="http://bit.ly/2qe2QmM" height="15"></div>
+                  <div class="blocks">
+                  <h6>Location</h6></div>
+                </div>
+
+                <div class="outer">
+                  <div class="block"><img src="http://bit.ly/2qhny4x" height="15"></div>
+                  <div class="blocks"><h6>Time</h6></div>
+                </div>
+
+              </div>
+            </div>
+            </div>
+            <br>
+            <a href="./exp/invisible.html"><div class="button">Book Now</div></a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--END OF EXP LIST-->
+    <div class="join">
+      <img src="https://lh3.googleusercontent.com/cgsvlwrxip2Mv3rBenktPw33jRTP2gdSehFke_Em1Mjj58rpE04mW8w09p8C48_6kAb-CIMCCEWKcE18qMALIuVMWygGfbVVLE3s7j7Y-iWFzlpLoLeylqU_fmQvb2luitPViRzhA_0hUElzCwMtFg3CxI_puvfPymXUK85TiiL145zImm7jx6LIfnp_iLAsG1uY_znXRJ2ytDkNFEbZ0xv_-7N2q-kVDtMh223BhEDqGkgw_eu2k3VkiyF3gV53fSUaUfWg1tVaIRQ_FmrAlW8fVOD5SPBiAt0GDWMYocbHf12rSSsqYmbLdZAAnzLTD4-lpJlAgOLjzpE3T2lkW2PSIopE7zIPGCdwuxaqyj79uNEzQapmf6U1qvTtjFMy68hEfWxIsmKi6EarF-RddhYbu4Vukx9yWebDbMq4Ogl9nmmOoJp0uY5LrbTeU6zeP2mlhc62Q1jQO9vSNWYMedT_I8msNDv43X9ZK6UlZRFQB8AaS0V9PwzwUyEqfYH5sc5rm7tU2qm2y_buVaO7drlJPdQIEKul3UyxaloOKJuhd4Px2usEjOOWKRPfxRNyl-GdORop_4p8JRSpFjssMDNacUowNVv3BGWDA9Y1llzMhMExbS8WyB_FAeKti8ePLZxlROq7lhwwz6vFbU_PAo81zsKwm6Lb9hiCsvA0cqk=s198-no" height=45px;>
+    <h4>Join our journey. Sign up to learn more.</h4>
+<div class="outer">
+    <div class="entry">
+      Enter your email
+    </div>
+    <a href="./exp/invisible.html">
+      <div class="button">Submit
+      </div>
+    </a>
+    </div>
+  </div>
+
+    <div id="footer">
+
+    </div>
+</div>
+
+</body>
+</html>
