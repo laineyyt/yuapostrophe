@@ -416,14 +416,12 @@ h3 {
   body, html {
     height: 100%;
     margin: 0;
-    font: 22px "lato", sans-serif;
     font-weight: 200;
-    line-height: 2.5em;
     color: #1e1f20;
   }
 
   h1 {
-    font: 2.3em "brandon grotesque", sans serif;
+    font: 22px "brandon grotesque", sans serif;
     color: white;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -431,7 +429,7 @@ h3 {
   }
 
   h2 {
-    font: 1.2em "lato", sans-serif;
+    font: 18px "lato", sans-serif;
     font-weight: 400;
     line-height: 1.4em;
     color: #1e1f20;
@@ -440,7 +438,7 @@ h3 {
 
   h5 {
     letter-spacing: 3px;
-    font-size: 1em;
+    font-size: 12px;
     font-weight: 300;
     opacity: .9;
     color: white;
@@ -449,12 +447,16 @@ h3 {
 
   h3 {
     letter-spacing: 2px;
-    font-size: 1em ;
+    font-size: 12px ;
     font-weight:700;
     color: #1e1f20;
     text-transform: uppercase;
   }
 
+  .p {
+	font-size: 16px;
+	  }
+	  
   .logo {
     background-color: #1e1f20 ;
     height: 48px;
@@ -606,7 +608,7 @@ h3 {
 
   .detail {
     letter-spacing: 2px;
-    font-size: 1em ;
+    font-size: 12px ;
     font-weight: 300;
     text-transform: uppercase;
   }
