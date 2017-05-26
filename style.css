@@ -577,6 +577,7 @@ p {
     font-weight: 500;
     letter-spacing: 2px;
     color: white;
+    display: block;
   }
 
   .logo {
