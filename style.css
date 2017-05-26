@@ -409,13 +409,14 @@ h3 {
     min-height: 220px;
   }
                                     }
+
 @media only screen and ( max-width: 767px ),
   (max-device-width: 767px){
 
   body, html {
     height: 100%;
     margin: 0;
-    font: 20px "lato", sans-serif;
+    font: 22px "lato", sans-serif;
     font-weight: 200;
     line-height: 2.5em;
     color: #1e1f20;
